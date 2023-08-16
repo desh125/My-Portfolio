@@ -1,205 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assignment/CSS/case1/assests/normalize.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-  </head>
-  <body>
-    
     <style>
-        .div1 {
-          width: 6vw;
-          height: 6vw;
-          position: absolute;
-          left: 0;
-          top: 0;
-          border-bottom-right-radius:180px ;
-          background-color: white;
-        }
-  
-        .div2 {
-          width: 10vw;
-          height: 10vw;
-          position: absolute;
-          left: 100px;
-          right: 100px;
-          top: -5vw;
-          background-color: white;
-          border-radius: 1000px;
-          margin: auto;
-        }
-  
-        .div3 {
-          width: 6vw;
-          height: 6vw;
-          position: absolute;
-          right: 0;
-          top: 0;
-          border-bottom-left-radius:180px ;
-          background-color: white;
 
+        .sqrd{
+            position: absolute;
+            border: 2px solid;
+            width: 8%;
+            height: 15%;
+            left: 0px;
+            top: 0px;
+            border-bottom-right-radius: 180%;
+            margin: auto;
+            background: rgb(255, 255, 255);
+            border-color: white;
         }
-  
-        .div4 {
-          width: 6vw;
-          height: 6vw;
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          border-top-right-radius:180px ;
-          background-color: white;
 
+        .sqrdtwo{
+            position: absolute;
+            border: 2px solid;
+            width: 8%;
+            height: 15%;
+            right: 0px;
+            top: 0px;
+            border-bottom-left-radius: 180%;
+            margin: auto;
+            background: rgb(255, 255, 255);
+            border-color: white;
         }
-  
-        .div5 {
-          width: 10vw;
-          height: 10vw;
-          position: absolute;
-          left: 0px;
-          right: 0px;
-          bottom: -5vw;
-          background-color: white;
-          border-radius: 1000px;
-          margin: auto;
+
+        .sqrdthree{
+            position: absolute;
+            border: 2px solid;
+            width: 8%;
+            height: 15%;
+            right: 0px;
+            bottom: 0px;
+            border-top-left-radius: 180%;
+            margin: auto;
+            background: rgb(255, 255, 255);
+            border-color: white;
         }
-  
-        .div6 {
-          width: 6vw;
-          height: 6vw;
-          position: absolute;
-          right: 0;
-          bottom: 0;
-          border-top-left-radius:180px ;
-          background-color: white;
+
+        .sqrdfour{
+            position: absolute;
+            border: 2px solid;
+            width: 8%;
+            height: 15%;
+            left: 0px;
+            bottom: 0px;
+            border-top-right-radius: 180%;
+            margin: auto;
+            background: rgb(255, 255, 255);
+            border-color: white;
         }
-  
-  
-  
-        .mainbox{
-          position: absolute;
-          border: 2px solid;
-          width: 10vw;
-          height: 10vw;
-          right: 0%;
-          left: 0%;
-          top: 0%;
-          bottom: 0%;
-          margin: auto;
-          background: rgb(255, 255, 255);
-      }
-  
-      .mainroundbox{
-          position: absolute;
-          border: 2px solid;
-          width: 50%;
-          height: 50%;
-          right: 0%;
-          left: 0%;
-          top: 0%;
-          bottom: 0%;
-          border-radius: 100%;
-          margin: auto;
-          background: rgb(236, 0, 0);
-      }
-  
-        .firstbox {
-          position: absolute;
-          width: 50vw;
-          height: 50vh;
-          top: 0;
-          left: 0;
-          background: rgb(255, 0, 0);
+
+        .sqfive{
+            position: absolute;
+            border: 2px solid;
+            width: 16%;
+            height: 30%;
+            right: 0%;
+            bottom: 0px;
+            margin: auto;
+            border-top-left-radius: 180%;
+            border-top-right-radius: 0%;
+            margin: auto;
+            background: rgb(255, 255, 255);
+            border-color: white;
         }
-  
-        .secondbox {
-          position: absolute;
-          width: 50vw;
-          height: 50vh;
-          right: 0%;
-          top: 0;
-          background: rgb(72, 255, 0);
+
+        .sqfiveplus{
+            position: absolute;
+            border: 3px solid;
+            width: 16%;
+            height: 30%;
+            left: 0%;
+            bottom: 0px;
+            margin: auto;
+            border-top-left-radius: 0%;
+            border-top-right-radius: 180%;
+            margin: auto;
+            background: rgb(255, 255, 255);
+            border-color: white;
         }
-  
-        .thirdbox {
-          position: absolute;
-          width: 50vw;
-          height: 50vh;
-          left: 0%;
-          bottom: 0%;
-          background: rgb(217, 255, 0);
+
+        .sqsix{
+            position: absolute;
+            border: 2px solid;
+            width: 16%;
+            height: 30%;
+            right: 0%;
+            top: 0px;
+            margin: auto;
+            border-bottom-left-radius: 180%;
+            border-bottom-right-radius: 0%;
+            margin: auto;
+            background: rgb(255, 255, 255);
+            border-color: white;
         }
-  
-        .forthbox {
-          position: absolute;
-  
-          width: 50vw;
-          height: 50vh;
-          right: 0%;
-          bottom: 0%;
-          background: pink;
+
+        .sqsixplus{
+            position: absolute;
+            border: 2px solid;
+            width: 16%;
+            height: 30%;
+            left: 0%;
+            top: 0px;
+            margin: auto;
+            border-bottom-left-radius: 0%;
+            border-bottom-right-radius: 180%;
+            margin: auto;
+            background: rgb(255, 255, 255);
+            border-color: white;
         }
-  
-        .squre{
-          position: absolute;
-          width: 10vw;
-          height: 10vw;
-          right: 0%;
-          left: 0%;
-          top: 0%;
-          bottom: 0%;
-          margin: auto;
-          border-radius: 100%;
-          background: rgb(253, 253, 253);
-      }
-  
-      .squrechild{
-          position: absolute;
-          width: 50%;
-          height: 50%;
-          right: 0%;
-          left: 0%;
-          top: 0%;
-          bottom: 0%;
-          margin: auto;
-          background: rgb(236, 0, 0);
-      }
-  
-      </style>
+
+
+        .firstbox{
+            position: absolute;
+            border: 0px solid;
+            width: 50%;
+            height: 50%;
+            background: rgb(255, 0, 0);
+            left: 0%;
+            top: 0%;
+            border-radius: 0px 0px 0px 0px;
+            border-color: red;
+        }
+
+        .secondbox{
+            position: absolute;
+            border: 0px solid;
+            width: 50%;
+            height: 50%;
+            right: 0%;
+            background: rgb(72, 255, 0);
+            right: 0%;
+            top: 0%;
+            border-color: rgb(72, 255, 0);
+        }
+
+        .thirdbox{
+            position: absolute;
+            border: 0px solid;
+            width: 50%;
+            height: 50%;
+            left: 0%;
+            bottom: 0%;
+            background: rgb(217, 255, 0);
+            border-color: rgb(217, 255, 0);
+        }
+
+        .forthbox{
+            position: absolute;
+            border: 0px solid;
+            width: 50%;
+            height: 50%;
+            right: 0%;
+            bottom: 0%;
+            background: rgb(255, 0, 242);
+            border-color: rgb(255, 0, 242);
+        }
+
+        .sq{
+            position: absolute;
+            border: 2px solid;
+            width: 20%;
+            height: 40%;
+            right: 0%;
+            left: 0%;
+            top: 0%;
+            bottom: 0%;
+            margin: auto;
+            border-radius: 100%;
+            background: rgb(253, 253, 253);
+            border-color: white;
+        }
+
+        .sqchild{
+            position: absolute;
+            border: 2px solid;
+            width: 50%;
+            height: 50%;
+            right: 0%;
+            left: 0%;
+            top: 0%;
+            bottom: 0%;
+            margin: auto;
+            background: rgb(236, 0, 0);
+            border-color: red;
+        }
+
+        .main{
+            position: absolute;
+            border: 2px solid;
+            width: 8%;
+            height: 15%;
+            right: 0%;
+            left: 0%;
+            top: 0%;
+            bottom: 0%;
+            margin: auto;
+            background: rgb(255, 255, 255);
+            border-color: white;
+        }
+
+        .mainsq{
+            position: absolute;
+            border: 2px solid;
+            width: 50%;
+            height: 50%;
+            right: 0%;
+            left: 0%;
+            top: 0%;
+            bottom: 0%;
+            border-radius: 100%;
+            margin: auto;
+            background: rgb(236, 0, 0);
+            border-color: red;
+        }
+
+
+
+        section#secondsec{
+            position: absolute;
+            display: block;
+            top: 1000px;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            
+        }
+
+    </style>
+
+</head>
+<body>
+    
     <section>
         <section class="firstbox">
-            <div class="squre">
-                <div class="squrechild"></div>
+            <div class="sq">
+                <div class="sqchild"></div>
             </div>
+            <div class="sqsix"></div>
         </section>
         <section class="secondbox">
-            <div class="squre">
-                <div class="squrechild"></div>
+            <div class="sq">
+                <div class="sqchild"></div>
             </div>
+            <div class="sqsixplus"></div>
         </section>
         <section class="thirdbox">
-            <div class="squre">
-                <div class="squrechild"></div>
+            <div class="sq">
+                <div class="sqchild"></div>
             </div>
+            <div class="sqfive"></div>
         </section>
         <section class="forthbox">
-            <div class="squre">
-                <div class="squrechild"></div>
+            <div class="sq">
+                <div class="sqchild"></div>
             </div>
+            <div class="sqfiveplus"></div>
         </section>
 
-        <div class="mainbox" >
-            <div class="mainroundbox" ></div>
+        <div class="main">
+            <div class="mainsq"></div>
         </div>
-
-      <div class="div1"></div>
-      <div class="div2"></div>  
-      <div class="div3"></div>
-      <div class="div4"></div>
-      <div class="div5"></div>
-      <div class="div6"></div>
+        <div class="sqrd"></div>
+        <div class="sqrdtwo"></div>
+        <div class="sqrdthree"></div>
+        <div class="sqrdfour"></div>
     </section>
-  </body>
+
+
+    <section id="secondsec">
+        <section class="firstbox">
+            <div class="sq">
+                <div class="sqchild"></div>
+            </div>
+            <div class="sqsix"></div>
+        </section>
+        <section class="secondbox">
+            <div class="sq">
+                <div class="sqchild"></div>
+            </div>
+            <div class="sqsixplus"></div>
+        </section>
+        <section class="thirdbox">
+            <div class="sq">
+                <div class="sqchild"></div>
+            </div>
+            <div class="sqfive"></div>
+        </section>
+        <section class="forthbox">
+            <div class="sq">
+                <div class="sqchild"></div>
+            </div>
+            <div class="sqfiveplus"></div>
+        </section>
+
+        <div class="main">
+            <div class="mainsq"></div>
+        </div>
+        <div class="sqrd"></div>
+        <div class="sqrdtwo"></div>
+        <div class="sqrdthree"></div>
+        <div class="sqrdfour"></div>
+    </section>
+
+</body>
 </html>
