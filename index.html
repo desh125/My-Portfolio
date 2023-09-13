@@ -16,6 +16,229 @@
 </head>
 
 <body>
+  <style>
+    body, h1, h2, h3, p {
+      margin: 0;
+      padding: 0;
+    }
+  
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+  
+    a {
+      text-decoration: none;
+    }
+  
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+  
+    header nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+  
+    header img {
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+    }
+  
+    main {
+      padding: 20px;
+    }
+  
+    #home {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+  
+    #home pre {
+      font-size: 24px;
+      white-space: pre-wrap;
+    }
+  
+    #home aside img {
+      border-radius: 50%;
+      width: 250px;
+      height: 250px;
+    }
+  
+    /* My Tech Stack section styles */
+    #my-tech-stack {
+      text-align: center;
+    }
+  
+    #my-tech-stack h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+  
+    #my-tech-stack h2 {
+      font-size: 24px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+  
+    #my-tech-stack img {
+      width: 120px;
+      margin: 10px;
+    }
+
+
+.project-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.project {
+  flex: 0 0 calc(33.33% - 20px);
+  margin-bottom: 20px;
+  text-align: center;
+  border: 1px solid #ccc; 
+  padding: 20px; 
+}
+
+.project img {
+  width: 100%;
+  max-width: 300px; 
+  display: block;
+  margin: 0 auto;
+}
+
+.project h3 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.project p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  margin-top: 10px; 
+}
+
+
+
+
+  
+    #gallery h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+  
+    #gallery .gallery {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+  
+    #gallery img {
+      max-width: 350px;
+    }
+  
+    #about h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+  
+    #about p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333;
+      margin-bottom: 20px;
+    }
+  
+    #about h3 {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+  
+    #contact h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+  
+    #contact a {
+      font-size: 24px;
+      text-decoration: none;
+      color: #333;
+    }
+  
+    #contact hr {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border-color: #666;
+    }
+  
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+  
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+  
+    footer img {
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+    }
+  
+    footer nav a {
+      margin: 0 10px;
+    }
+  
+    @media screen and (max-width: 768px) {
+      #home {
+        flex-direction: column;
+        text-align: center;
+      }
+  
+      #home aside img {
+        margin-top: 20px;
+      }
+  
+      #projects section {
+        flex-direction: column;
+        text-align: center;
+      }
+  
+      #projects section img {
+        margin: 0;
+      }
+  
+      #about h3 {
+        margin-top: 10px;
+      }
+  
+      #gallery .gallery {
+        flex-direction: column;
+        text-align: center;
+      }
+  
+      #gallery img {
+        margin: 10px 0;
+      }
+    }
+  </style>
+  
   <header>
     <nav>
       <a href="#home">Home</a>
@@ -85,48 +308,39 @@
         <h1>Projects</h1>
         <h2>Things I’ve built so far</h2>
       </div>
-
-      <section>
-        <section>
+      <div class="project-row">
+        <div class="project">
           <img src="assets/box image 1.png" width="300" srcset="" />
-        </section>
-        <aside>
           <h3>Software Using Java</h3>
           <p>
-            I created a profession software using java.it called hotel
-            management system.I created that software for a hotel called
-            sunray residence situated in wathuruwila.
+            I created a professional software using Java. It is called the Hotel
+            Management System. I developed this software for Sunray Residence, a
+            hotel situated in Wathuruwila.
           </p>
-        </aside>
-      </section>
-      <section>
-        <section>
+        </div>
+    
+        <div class="project">
           <img src="assets/box image 1.png" width="300" srcset="" />
-        </section>
-        <aside>
-          <h3>Website using wix</h3>
+          <h3>Software Using Java</h3>
           <p>
-            This is one of the wix websites i created for my clients.I used
-            Wix platform and Java Script coding language to finish this
-            project
+            I created a professional software using Java. It is called the Hotel
+            Management System. I developed this software for Sunray Residence, a
+            hotel situated in Wathuruwila.
           </p>
-        </aside>
-      </section>
-      <section>
-        <section>
-          <img src="assets/box image 1.png" width="300" alt="" srcset="" />
-        </section>
-        <aside>
-          <h3>Website using wix</h3>
+        </div>
+    
+        <div class="project">
+          <img src="assets/box image 1.png" width="300" srcset="" />
+          <h3>Software Using Java</h3>
           <p>
-            This is one of the wix websites i created for my clients.I used
-            Wix platform and Java Script coding language to finish this
-            project
+            I created a professional software using Java. It is called the Hotel
+            Management System. I developed this software for Sunray Residence, a
+            hotel situated in Wathuruwila.
           </p>
-        </aside>
-      </section>
+        </div>
+      </div>
     </section>
-
+    
     <section id="gallery">
       <h1>Gallery</h1>
       <section>
