@@ -17,268 +17,400 @@
 
 <body>
   <style>
-    body, h1, h2, h3, p {
+    body,
+    h1,
+    h2,
+    h3,
+    p {
       margin: 0;
       padding: 0;
     }
-  
+
+    h1 {
+      color: #42446E;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
+      background-color: #ffffff;
       margin: 0;
       padding: 0;
     }
-  
+
     a {
       text-decoration: none;
     }
-  
+
     header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px;
+      margin-right: 10vw;
+      margin-left: 10vw;
+      background-color: #ffffff;
     }
-  
-    header nav a {
-      color: #fff;
-      margin: 0 15px;
+
+    .logo img {
+      max-width: 100px;
+    }
+
+    .nav {
+      flex-grow: 1;
+      margin-left: 20vw;
+    }
+
+    nav a {
       text-decoration: none;
+      margin-right: 40px;
+      color: #333;
     }
-  
-    header img {
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-icons img {
+      width: 20px;
+      height: 20px;
+      object-fit: cover;
       border-radius: 50%;
-      width: 80px;
-      height: 80px;
     }
-  
+
+
     main {
       padding: 20px;
     }
-  
+
+
+
+
+    .project-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 0 -10px;
+
+
+      .project {
+        flex-basis: calc(22% - 20px);
+        margin: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-sizing: border-box;
+        background-color: #fff;
+        text-align: center;
+      }
+
+
+      .box {
+        text-align: center;
+      }
+
+      .box img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0;
+      }
+
+
+      .box h3 {
+        font-size: 18px;
+        margin-top: 13px;
+        margin-bottom: 5px;
+      }
+
+
+      .box p {
+        margin: 13px;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+    }
+
+
+    .gallery-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      margin-bottom: 100px;
+    }
+
+    .gallery-image {
+      width: 750px;
+      height: auto;
+      margin-left: 80px;
+      margin-right: 80px;
+      border-radius: 10px;
+    }
+
+
+    .gallery-arrow1 {
+      width: 30px;
+      height: 30px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    .gallery-arrow1:hover {
+      opacity: 0.7;
+    }
+
+    .gallery-arrow2 {
+      width: 30px;
+      height: 30px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    .gallery-arrow2:hover {
+      opacity: 0.7;
+    }
+
+
+
+    .frow {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      width: 50vw;
+    }
+
+    .button1 {
+      width: 80px;
+      height: 30px;
+      border-radius: 20px;
+      background-color: greenyellow;
+      cursor: pointer;
+    }
+
+
     #home {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 100px;
     }
-  
+
     #home pre {
-      font-size: 24px;
+      font-size: 34px;
       white-space: pre-wrap;
+      margin: 0;
+      padding-left: 0;
     }
-  
+
     #home aside img {
       border-radius: 50%;
       width: 250px;
       height: 250px;
+      margin-right: 10vw;
     }
-  
-    /* My Tech Stack section styles */
+
+
     #my-tech-stack {
       text-align: center;
     }
-  
+
     #my-tech-stack h1 {
       font-size: 36px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
-  
+
     #my-tech-stack h2 {
       font-size: 24px;
       color: #666;
-      margin-bottom: 20px;
+      margin-bottom: 50px;
     }
-  
+
     #my-tech-stack img {
       width: 120px;
-      margin: 10px;
+      margin: 40px;
+
+      margin-left: 80px;
+      margin-right: 80px;
     }
 
+    #projects {
 
-.project-row {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
+      text-align: center;
+      margin-left: 8vw;
+      margin-right: 8vw;
+    }
 
-.project {
-  flex: 0 0 calc(33.33% - 20px);
-  margin-bottom: 20px;
-  text-align: center;
-  border: 1px solid #ccc; 
-  padding: 20px; 
-}
+    #projects h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      margin-top: 100px;
+    }
 
-.project img {
-  width: 100%;
-  max-width: 300px; 
-  display: block;
-  margin: 0 auto;
-}
+    #projects h2 {
+      font-size: 24px;
+      color: #666;
+      margin-bottom: 30px;
+    }
 
-.project h3 {
-  font-size: 24px;
-  margin-top: 10px;
-}
+    #gallery {
+      text-align: center;
+      margin-top: 100px;
+    }
 
-.project p {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333;
-  margin-top: 10px; 
-}
-
-
-
-
-  
     #gallery h1 {
       font-size: 36px;
-      margin-bottom: 10px;
+      margin-bottom: 40px;
     }
-  
-    #gallery .gallery {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 20px;
+
+    #about {
+      margin-left: 12vw;
     }
-  
-    #gallery img {
-      max-width: 350px;
-    }
-  
+
     #about h1 {
       font-size: 36px;
-      margin-bottom: 10px;
+      margin-bottom: 25px;
     }
-  
+
     #about p {
+      width: 60vw;
       font-size: 16px;
       line-height: 1.5;
       color: #333;
-      margin-bottom: 20px;
+      margin-bottom: 45px;
     }
-  
+
     #about h3 {
       font-size: 20px;
       margin-top: 20px;
     }
-  
+
+    #contact {
+      text-align: center;
+      margin-top: 120px;
+      margin-bottom: 100px;
+    }
+
     #contact h1 {
       font-size: 36px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
-  
+
     #contact a {
       font-size: 24px;
       text-decoration: none;
-      color: #333;
+      background: linear-gradient(to right, #13B0F5, #E70FAA);
+      -webkit-background-clip: text;
+      color: transparent;
     }
-  
+
+
     #contact hr {
       margin-top: 20px;
       margin-bottom: 20px;
       border-color: #666;
     }
-  
+
     footer {
-      background-color: #333;
-      color: #fff;
+      color: #42446E;
       padding: 20px;
+      margin-left: 10vw;
+      margin-right: 10vw;
     }
-  
-    footer a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 15px;
+
+    #footSec1 {
+      display: flex;
+      justify-content: space-between;
     }
-  
-    footer img {
-      border-radius: 50%;
+
+    #footSec2 {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 100px;
+      margin-top: 45px;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .pn {
+      margin-right: 30px;
+    }
+
+
+    .contact-info div {
+      display: flex;
+      justify-content: space-between;
+      text-align: right;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-icons img {
       width: 20px;
       height: 20px;
+      object-fit: cover;
+      border-radius: 50%;
     }
-  
-    footer nav a {
-      margin: 0 10px;
+
+    .spacediv {
+      margin-top: 30px;
+      height: 0.5px;
+      background-color: #666;
     }
-  
-    @media screen and (max-width: 768px) {
-      #home {
-        flex-direction: column;
-        text-align: center;
-      }
-  
-      #home aside img {
-        margin-top: 20px;
-      }
-  
-      #projects section {
-        flex-direction: column;
-        text-align: center;
-      }
-  
-      #projects section img {
-        margin: 0;
-      }
-  
-      #about h3 {
-        margin-top: 10px;
-      }
-  
-      #gallery .gallery {
-        flex-direction: column;
-        text-align: center;
-      }
-  
-      #gallery img {
-        margin: 10px 0;
-      }
+
+    nav a {
+      text-decoration: none;
+      color: #42446E;
+      margin: 0 15px;
     }
   </style>
-  
+
   <header>
-    <nav>
+    <section class="logo">
+      <img src="assets/Logo.png" alt="" srcset="" />
+    </section>
+    <nav class="nav">
       <a href="#home">Home</a>
       <a href="#my-tech-stack">My Tech Stack</a>
       <a href="#projects">Projects</a>
       <a href="#about">About</a>
       <a href="#contact">Contact Me</a>
     </nav>
-    <section><img src="assets/Logo.png" alt="" srcset="" /></section>
-    <section>
-      <div style="width: 20px; height: 20px; overflow: hidden;">
-        <a href="https://github.com/desh125">
-          <img style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" src="assets/Github.png"
-            alt="Github">
-        </a>
-      </div>
-      <div style="width: 20px; height: 20px; overflow: hidden;">
-        <a href="https://www.linkedin.com/in/deshan-tharaka-4a6595280/">
-          <img style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" src="assets/linkdin.png"
-            alt="Github">
-        </a>
-      </div>
-
-      <div style="width: 20px; height: 20px; overflow: hidden;">
-        <a href="https://twitter.com/TharakaDes29074">
-          <img style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" src="assets/Twitter.png"
-            alt="Github">
-        </a>
-      </div>
+    <section class="social-icons">
+      <a href="https://github.com/desh125">
+        <img src="assets/Github.png" alt="Github">
+      </a>
+      <a href="https://www.linkedin.com/in/deshan-tharaka-4a6595280/">
+        <img src="assets/linkdin.png" alt="LinkedIn">
+      </a>
+      <a href="https://twitter.com/TharakaDes29074">
+        <img src="assets/Twitter.png" alt="Twitter">
+      </a>
     </section>
     <hr>
   </header>
+
   <main>
     <section id="home">
       <section>
         <pre>
-               Hi 👋,
-               My name is 
-               Deshan Tharaka
-               I build things for web
+
+
+
+         Hi 👋,
+         My name is 
+         Deshan Tharaka
+         I build things for web
               
           </pre>
       </section>
@@ -293,12 +425,19 @@
         <h2>Technologies I’ve been working with recently</h2>
       </div>
       <section>
-        <img src="assets/intelij.png" width="120" srcset="" />
-        <img src="assets/vscode.png" width="120" srcset="" />
-        <img src="assets/java.png" width="120" srcset="" />
-        <img src="assets/vector.png" width="120" srcset="" />
-        <img src="assets/js.png" width="120" srcset="" />
-        <img src="assets/css.png" width="120" srcset="" />
+        <div>
+          <img src="assets/intelij.png" width="120" srcset="" />
+          <img src="assets/java.png" width="120" srcset="" />
+          <img src="assets/vscode.png" width="120" srcset="" />
+
+        </div>
+        <div>
+
+          <img src="assets/vector.png" width="120" srcset="" />
+          <img src="assets/js.png" width="120" srcset="" />
+          <img src="assets/css.png" width="120" srcset="" />
+        </div>
+
 
       </section>
     </section>
@@ -310,48 +449,52 @@
       </div>
       <div class="project-row">
         <div class="project">
-          <img src="assets/box image 1.png" width="300" srcset="" />
-          <h3>Software Using Java</h3>
-          <p>
-            I created a professional software using Java. It is called the Hotel
-            Management System. I developed this software for Sunray Residence, a
-            hotel situated in Wathuruwila.
-          </p>
+          <div class="box">
+            <img src="assets/box image 1.png" width="300" srcset="" />
+            <h3>Software Using Java</h3>
+            <p>
+              I created a professional software using Java. It is called the Hotel
+              Management System. I developed this software for Sunray Residence, a
+              hotel situated in Wathuruwila.
+            </p>
+          </div>
         </div>
-    
+
         <div class="project">
-          <img src="assets/box image 1.png" width="300" srcset="" />
-          <h3>Software Using Java</h3>
-          <p>
-            I created a professional software using Java. It is called the Hotel
-            Management System. I developed this software for Sunray Residence, a
-            hotel situated in Wathuruwila.
-          </p>
+          <div class="box">
+            <img src="assets/box image 1.png" width="300" srcset="" />
+            <h3>Software Using Java</h3>
+            <p>
+              I created a professional software using Java. It is called the Hotel
+              Management System. I developed this software for Sunray Residence, a
+              hotel situated in Wathuruwila.
+            </p>
+          </div>
         </div>
-    
+
         <div class="project">
-          <img src="assets/box image 1.png" width="300" srcset="" />
-          <h3>Software Using Java</h3>
-          <p>
-            I created a professional software using Java. It is called the Hotel
-            Management System. I developed this software for Sunray Residence, a
-            hotel situated in Wathuruwila.
-          </p>
+          <div class="box">
+            <img src="assets/box image 1.png" width="300" srcset="" />
+            <h3>Software Using Java</h3>
+            <p>
+              I created a professional software using Java. It is called the Hotel
+              Management System. I developed this software for Sunray Residence, a
+              hotel situated in Wathuruwila.
+            </p>
+          </div>
         </div>
       </div>
     </section>
-    
+
     <section id="gallery">
       <h1>Gallery</h1>
-      <section>
-        <div class="gallery">
-          <img width="350" src="assets/gallery image 1.png" alt="Image 1">
-          <img width="350" src="assets/gallery image 2.png" alt="Image 2">
-          <img width="30" src="assets/left-arrow 1.png" alt="">
-          <img width="30" src="assets/right arrow.png" alt="">
-        </div>
-      </section>
+      <div class="gallery-container">
+        <img class="gallery-arrow1" src="assets/left-arrow 1.png" alt="Left Arrow">
+        <img class="gallery-image" src="assets/gallery image 1.png" alt="Image 1">
+        <img class="gallery-arrow2" src="assets/right arrow.png" alt="Right Arrow">
+      </div>
     </section>
+
 
     <section id="about">
       <section>
@@ -363,17 +506,21 @@
           and its potential to transform the world we live in.
         </p>
       </section>
-      <section>
+      <section id="education">
         <h1>Education</h1>
-        <div>
+        <div class="frow">
           <h3>Advanced Level Education</h3>
-          <h5>All saint's College</h5>
-          <button>Full Time</button>
+          <button class="button1">Full Time</button>
         </div>
         <div>
+          <h5>All saint's College</h5>
+        </div>
+        <div class="frow">
           <h3>Graduate Diploma In Software Engineering</h3>
+          <button class="button1">Full Time</button>
+        </div>
+        <div>
           <h5>Institute Of Software Engineering(IJSE)</h5>
-          <button>Full Time</button>
         </div>
       </section>
     </section>
@@ -383,24 +530,22 @@
       <div>
         <h1>For any questions please email me</h1>
         <a href="mailto:deshtharaka@gmail.com">deshtharaka@gmail.com</a>
-        <hr>
+
       </div>
     </section>
   </main>
+
   <footer>
-    <section>
-      <section>
+    <section id="footSec1">
+      <div class="logo-section">
+        <img width="100" src="assets/Logo.png" alt="" srcset="" />
+      </div>
+      <div class="contact-info">
         <div>
-          <section>
-            <img width="200" src="assets/Logo.png" alt="" srcset="" />
-          </section>
-          <section>
-            <div>
-              <p><a href="tel:0743525973">0743525973</a></p>
-            </div>
-            <a href="mailto:deshtharaka@gmail.com">deshtharaka@gmail.com</a>
+          <p><a href="tel:0743525973" class="pn">0743525973</a></p>
+          <a href="mailto:deshtharaka@gmail.com">deshtharaka@gmail.com</a>
         </div>
-        <div>
+        <div class="social-icons">
           <div style="width: 20px; height: 20px; overflow: hidden;">
             <a href="https://github.com/desh125">
               <img style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" src="assets/Github.png"
@@ -410,35 +555,36 @@
           <div style="width: 20px; height: 20px; overflow: hidden;">
             <a href="https://www.linkedin.com/in/deshan-tharaka-4a6595280/">
               <img style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" src="assets/linkdin.png"
-                alt="Github">
+                alt="LinkedIn">
             </a>
           </div>
-
           <div style="width: 20px; height: 20px; overflow: hidden;">
             <a href="https://twitter.com/TharakaDes29074">
               <img style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" src="assets/Twitter.png"
-                alt="Github">
+                alt="Twitter">
             </a>
           </div>
-
         </div>
-      </section>
       </div>
     </section>
-    <section>
-      <section>
-        <nav>
+    <div class="spacediv"></div>
+    <section id="footSec2">
+      <div class="footdiv1">
+        <nav class="nav2">
           <a href="#home">Home</a>
           <a href="#my-tech-stack">My Tech Stack</a>
           <a href="#projects">Projects</a>
           <a href="#about">About</a>
           <a href="#contact">Contact Me</a>
         </nav>
-      </section>
-      <Section><small>Designed & Built By Deshan Tharaka &copy; &reg;</small></Section>
-    </section>
+      </div>
+
+      <div class="copyright">
+        <small>Designed & Built By Deshan Tharaka &copy; &reg;</small>
+      </div>
     </section>
   </footer>
+
 </body>
 
 </html>
