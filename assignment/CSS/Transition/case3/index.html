@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case 03</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%; 
+            height: auto;
+            transition: filter 0.3s ease;
+        }
+
+        .recycle-bin {
+            width: 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-container:hover img {
+            filter: brightness(0.7);
+        }
+
+        .image-container:hover .recycle-bin {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="/assignment/CSS/Transition/case3/assets/image1.jpg" alt="img">
+        <div class="recycle-bin">
+            <img src="/assignment/CSS/Transition/case3/assets/recycle.jpeg" alt="Recycle bin" width="30">
+        </div>
+    </div>
+</body>
+</html>

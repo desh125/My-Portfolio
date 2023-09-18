@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transition Case 01</title>
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  <style>
+    section{
+      width: 100vw;
+      height: 100vh;
+    }
+
+    section div{
+      width: 200px;
+      height: 50px;
+      background-color: rgb(55, 0, 255);
+      box-shadow: 3px 3px 3px black;
+      margin-top: 100px;
+      position: relative;
+      left: -10%;
+      color: white;
+      font-size: 20px;
+      transition: 2s;
+
+    }
+
+    section div i{
+      position: relative;
+      top: 10px;
+      color: white;
+      margin-left: 70px;
+      font-size: 30px;
+    }
+
+    section div:hover{
+      left:-8px;
+      transition: 2s;
+    }
+  </style>
+</head>
+<body>
+<section>
+  <div>Menu One<i class="book"></i></div>
+  <div>Menu Two<i class="medical"></i></div>
+  <div>Menu Three<i class="fabook"></i></div>
+  <div>Menu Four<i class="fa-layer-group"></i></div>
+  <div>Menu Five<i class="cart-plus"></i></div>
+</section>
+</body>
+</html>
