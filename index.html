@@ -46,7 +46,9 @@
       align-items: center;
       justify-content: space-between;
       padding: 40px;
-      margin-right: 9vw;
+      margin-bottom: 80px;
+      margin-top: 30px;
+      margin-right: 10vw;
       margin-left: 10vw;
       background-color: #ffffff;
     }
@@ -57,7 +59,7 @@
 
     .nav {
       flex-grow: 1;
-      margin-left: 18vw;
+      margin-left: 19vw;
     }
 
     nav a {
@@ -200,11 +202,13 @@
       margin-bottom: 100px;
     }
 
-    #home pre {
+    #home p {
       font-size: 34px;
       white-space: pre-wrap;
       margin: 0;
       padding-left: 0;
+      margin-left: 12vw;
+      line-height: 1.6;
     }
 
     #home aside img {
@@ -250,7 +254,7 @@
       margin-bottom: 10px;
       margin-top: 100px;
     }
-    
+
 
     #projects h2 {
       font-size: 24px;
@@ -292,7 +296,7 @@
       color: #666;
     }
 
-    #about h5{
+    #about h5 {
       color: #666;
     }
 
@@ -383,12 +387,237 @@
       margin: 0 15px;
     }
 
+    .mobile-header {
+      display: none;
+
+    }
+
+    .hamburger-icon {
+      max-width: 30px;
+      cursor: pointer;
+      margin-right: 0px;
+    }
+
+
+
+    @media (max-width: 320px) {
+
+      header{
+
+        display: flex;
+        justify-content: space-between;
+        margin-right: 0;
+        margin-left: 0;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .social-icons {
+        display: none;
+      }
+
+      .mobile-header {
+        display: block;
+      }
+
+      header {
+        padding: 20px;
+      }
+      #my-tech-stack h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      #my-tech-stack h2 {
+        font-size: 16px;
+        margin-bottom: 40px;
+      }
+
+      #my-tech-stack img {
+        width: 70px;
+        margin: 40px;
+        padding-bottom: 30px;
+
+      }
+
+
+      #projects h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      #projects h2 {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      #gallery {
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      #gallery h1 {
+font-size: 24px;
+margin-bottom: 10px;
+      }
+
+      .gallery-image{
+        width: 200px;
+      }
+      .gallery-arrow1{
+        width: 18px;
+        height: 18px;
+      }
+
+      .gallery-arrow2{
+        width: 18px;
+        height: 18px;
+      }
+      #about {
+        margin-top: 20px;
+        margin-left: 0vw;
+        margin-right: 0vw;
+      }
+  
+      #about h1 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 25px;
+      }
+  
+      #about p {
+        text-align: center;
+        width: 80vw;
+        font-size: 13px;
+        margin-left: 8px;
+        line-height: 1.5;
+        color: #333;
+        margin-bottom: 30px;
+      }
+  
+      #about h3 {
+        font-size: 16px;
+        margin-top: 10px;
+        text-align: center;
+        color: #666;
+      }
+  
+      #about h5 {
+        text-align: center;
+        color: #666;
+      }
+
+      #education {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+      }
+
+      .frow {
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+
+      }
+
+      .button1 {
+        width: 80px;
+        height: 30px;
+        border-radius: 20px;
+        margin-top: 13px;
+        background-color: greenyellow;
+        cursor: pointer;
+      }
+
+      #footSec1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      #footSec2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 100px;
+        margin-top: 45px;
+      }
+
+      .nav {
+        margin-left: 10px;
+      }
+
+      .project-row {
+        flex-direction: column;
+      }
+
+      .project {
+        flex-basis: 100%;
+        margin: 10px;
+      }
+
+      #contact {
+        margin-top: 35px;
+      }
+
+#contact h1 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+#contact a {
+  font-size: 16px;
+
+}
+
+
+
+      #home {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+    
+      #home aside {
+        margin-left: 28px;
+        order: -1;
+        margin-bottom: 2px;
+      }
+    
+      #home p {
+        font-size: 24px; 
+        padding: 10px; 
+        margin: auto;    
+  }
+
+      #my-tech-stack div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #my-tech-stack img {
+        margin: 10px 0;
+      }
+    }
   </style>
 
   <header>
     <section class="logo">
       <img src="assets/Logo.png" alt="" srcset="" />
     </section>
+    <div class="mobile-header">
+      <img src="assets/menu 1.png" alt="Menu" class="hamburger-icon" onclick="toggleMobileMenu()">
+    </div>
     <nav class="nav">
       <a href="#home">Home</a>
       <a href="#my-tech-stack">My Tech Stack</a>
@@ -407,22 +636,16 @@
         <img src="assets/Twitter.png" alt="Twitter">
       </a>
     </section>
+
     <hr>
   </header>
 
   <main>
     <section id="home">
       <section>
-        <pre>
-
-
-
-         Hi 👋,
-         My name is 
-         Deshan Tharaka
-         I build things for web
-              
-          </pre>
+        <p>
+Hi 👋,<br>My name is<br>Deshan Tharaka<br>I build things for web
+        </p>
       </section>
       <aside>
         <img style="border-radius: 50%;" src="assets/first image.png" width="250" height="250" alt="" srcset="" />
@@ -472,10 +695,11 @@
 
         <div class="project">
           <div class="box">
-            <img src="assets/works1.jpg" width="300"  srcset="" />
+            <img src="assets/works1.jpg" width="300" srcset="" />
             <h3>Website Using Wix</h3>
             <p>
-              This is one of the wix websites i created for my clients.I used Wix platform and Java Script coding language to finish this project
+              This is one of the wix websites i created for my clients.I used Wix platform and Java Script coding
+              language to finish this project
             </p>
           </div>
         </div>
@@ -485,7 +709,8 @@
             <img src="assets/works2.png" width="300" srcset="" />
             <h3>Website Using Wix</h3>
             <p>
-              This is a website i created for my team in the group project.I used Wix platform and Java Script coding language to finish this project
+              This is a website i created for my team in the group project.I used Wix platform and Java Script coding
+              language to finish this project
             </p>
           </div>
         </div>
