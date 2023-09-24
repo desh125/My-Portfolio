@@ -46,7 +46,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 40px;
+      padding: 30px;
       margin-bottom: 80px;
       margin-top: 30px;
       margin-right: 10vw;
@@ -147,17 +147,17 @@
     }
 
     .gallery-image {
-      width: 650px;
+      width: 47vw;
       height: auto;
-      margin-left: 80px;
-      margin-right: 80px;
+      margin-left: 8vw;
+      margin-right: 8vw;
       border-radius: 10px;
     }
 
 
     .gallery-arrow1 {
-      width: 50px;
-      height: 50px;
+      width: 3vw;
+      height: 3vw;
       margin: 0 10px;
       cursor: pointer;
     }
@@ -167,8 +167,8 @@
     }
 
     .gallery-arrow2 {
-      width: 50px;
-      height: 50px;
+      width: 3vw;
+      height: 3vw;
       margin: 0 10px;
       cursor: pointer;
     }
@@ -407,6 +407,17 @@
     }
 
 
+    @media  (max-width : 1024px){
+      .nav {
+        flex-grow: 1;
+        margin-left: 8vw;
+        align-items: center;
+      }
+
+    }
+      
+    
+
 
     @media (max-width: 320px) {
 
@@ -441,6 +452,7 @@ gap: 49vw;
       #my-tech-stack h1 {
         font-size: 24px;
         margin-bottom: 10px;
+        margin-top: 0px;
       }
 
       #my-tech-stack h2 {
@@ -451,9 +463,11 @@ gap: 49vw;
       #my-tech-stack img {
         width: 70px;
         margin: 40px;
-        padding-bottom: 30px;
+        padding-bottom: 25px;
 
       }
+
+
 
 
       #projects h1 {
@@ -489,6 +503,9 @@ margin-bottom: 10px;
         height: 18px;
       }
       #about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin-top: 20px;
         margin-left: 0vw;
         margin-right: 0vw;
@@ -504,10 +521,10 @@ margin-bottom: 10px;
         text-align: center;
         width: 80vw;
         font-size: 13px;
-        margin-left: 8px;
+        margin-left: 0px;
         line-height: 1.5;
         color: #333;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
       }
   
       #about h3 {
@@ -666,6 +683,10 @@ display: none;
       margin-right: 0px;
     }
 
+
+    #about h1 {
+      margin-bottom: 20px;
+    }
       #home {
         flex-direction: column;
         align-items: center;
