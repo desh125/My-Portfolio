@@ -125,16 +125,24 @@ nav a:hover {
       margin: 0 -10px;
 
 
-      .project {
-        flex-basis: calc(22% - 20px);
-        margin: 10px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        box-sizing: border-box;
-        background-color: #fff;
-        text-align: center;
-      }
+
+.project {
+  flex-basis: calc(22% - 20px);
+  margin: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: #fff;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.project:hover {
+  background-color:#E7F0ED; 
+
+}
+
 
 
       .box {
@@ -280,6 +288,15 @@ nav a:hover {
       margin-right: 80px;
     }
 
+    .flip-image {
+      width: 120px;
+      transition: transform 0.3s; 
+    }
+    
+    .flip-image:hover {
+      transform: rotateY(180deg); 
+    }
+
     #projects {
 
       text-align: center;
@@ -311,7 +328,7 @@ nav a:hover {
     }
 
     #about {
-      margin-top: 150px;
+      margin-top: 16vw;
       margin-left: 12vw;
     }
 
@@ -325,7 +342,7 @@ nav a:hover {
       font-size: 16px;
       line-height: 1.5;
       color: #333;
-      margin-bottom: 45px;
+      margin-bottom: 7vw;
     }
 
     #about h3 {
@@ -848,19 +865,17 @@ Hi <span class="wave-hand">👋</span>,<br>My name is<br><span class="special-te
         <h2>Technologies I’ve been working with recently</h2>
       </div>
       <section>
-        <div>
-          <img src="assets/intelij.png" width="120" srcset="" />
-          <img src="assets/java.png" width="120" srcset="" />
-          <img src="assets/vscode.png" width="120" srcset="" />
 
+        <div>
+          <img class="flip-image" src="assets/intelij.png" width="120" srcset="" />
+          <img class="flip-image" src="assets/java.png" width="120" srcset="" />
+          <img class="flip-image" src="assets/vscode.png" width="120" srcset="" />
         </div>
         <div>
-
-          <img src="assets/Vector.png" width="120" srcset="" />
-          <img src="assets/js.png" width="120" srcset="" />
-          <img src="assets/css.png" width="120" srcset="" />
+          <img class="flip-image" src="assets/Vector.png" width="120" srcset="" />
+          <img class="flip-image" src="assets/js.png" width="120" srcset="" />
+          <img class="flip-image" src="assets/css.png" width="120" srcset="" />
         </div>
-
 
       </section>
     </section>
