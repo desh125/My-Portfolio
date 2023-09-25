@@ -785,9 +785,15 @@ nav a {
 
     @media All and (max-width: 425px) {
 
-        html,body {
-            overflow: hidden;
-        }
+        html {
+            overflow-x: hidden; /* Hide horizontal overflow */
+          }
+          
+          body {
+            overflow-y: auto; /* Enable vertical scrolling */
+            overflow-x:hidden ;
+          }
+          
         header {
 
             gap: 66vw;
@@ -1185,9 +1191,15 @@ nav a {
 
     @media All and (max-width: 320px) {
 
-        html,body{
-            overflow: hidden;
+        html {
+            overflow-x: hidden; /* Hide horizontal overflow */
         }
+          
+          body {
+            overflow-y: auto; /* Enable vertical scrolling */
+            overflow-x:hidden ;
+          }
+          
         header {
 
             gap: 54vw;
