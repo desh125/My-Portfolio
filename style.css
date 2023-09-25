@@ -210,6 +210,7 @@ main {
 .frow {
     display: flex;
     justify-content: space-between;
+    position: relative;
     align-items: center;
     border: #000;
     margin-bottom: 20px;
@@ -341,7 +342,6 @@ main {
 
 #about h3 {
     font-size: 20px;
-    margin-top: 20px;
     color: #666;
 }
 
@@ -392,7 +392,7 @@ footer {
 #footSec2 {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 4vw;
+    margin-bottom: 1vw;
     margin-top: 45px;
 }
 
@@ -401,10 +401,12 @@ footer {
     justify-content: space-between;
     align-items: center;
     gap: 40px;
+
 }
 
 .pn {
     margin-right: 30px;
+    color: #42446E;
 }
 
 
@@ -666,26 +668,23 @@ nav a {
 
         #projects h1 {
             font-size: 24px;
-            /* Adjust the font size as needed */
+
             margin-bottom: 10px;
             margin-top: 50px;
         }
 
         #projects h2 {
             font-size: 18px;
-            /* Adjust the font size as needed */
             margin-bottom: 15px;
         }
 
         #gallery h1 {
             font-size: 24px;
-            /* Adjust the font size as needed */
             margin-bottom: 30px;
         }
 
         .gallery-image {
             width: 90%;
-            /* Adjust the image size as needed */
             max-width: 400px;
             height: auto;
             margin-left: 4vw;
@@ -707,63 +706,55 @@ nav a {
 
         #about {
             margin-top: 20px;
-            margin-left: 0;
         }
 
         #about h1 {
             font-size: 24px;
-            /* Adjust the font size as needed */
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         #about p {
             width: 90%;
             font-size: 14px;
-            /* Adjust the font size as needed */
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 20px;
+            margin-bottom: 50px;
         }
 
         #about h3 {
             font-size: 16px;
-            /* Adjust the font size as needed */
-            margin-top: 10px;
         }
 
         #about h5 {
             font-size: 14px;
-            /* Adjust the font size as needed */
+            margin-top: 0px;
         }
 
         #contact {
-            margin-top: 30px;
+            margin-top: 100px;
             margin-bottom: 30px;
         }
 
         #contact h1 {
             font-size: 24px;
-            /* Adjust the font size as needed */
             margin-bottom: 15px;
         }
 
         #contact a {
             font-size: 18px;
-            /* Adjust the font size as needed */
         }
 
         footer {
-            padding: 10px;
+            padding: 30px;
         }
 
         #footSec1 {
-            flex-direction: column;
             align-items: center;
         }
 
+ 
+
+
         .social-icons img {
             width: 20px;
-            /* Adjust the social icon size as needed */
             height: 20px;
         }
 
@@ -772,25 +763,32 @@ nav a {
         }
 
         .nav2 {
-            margin-top: 20px;
+            margin-top: 0px;
         }
 
         .nav2 a {
-            font-size: 18px;
-            /* Adjust the font size as needed */
+            font-size: 14px;
+
             margin: 5px;
         }
+
+        .pn{
+            font-size: 14px;
+        }
+
+
+
     }
 
 
     @media All and (max-width: 425px) {
 
         html {
-            overflow-x: hidden; /* Hide horizontal overflow */
+            overflow-x: hidden; 
           }
           
           body {
-            overflow-y: auto; /* Enable vertical scrolling */
+            overflow-y: auto; 
             overflow-x:hidden ;
           }
           
@@ -1073,7 +1071,7 @@ nav a {
             justify-content: space-between;
             align-items: center;
             flex-direction: column;
-            margin-bottom: 100px;
+            margin-bottom: 60px;
             margin-top: 45px;
         }
 
@@ -1192,14 +1190,14 @@ nav a {
     @media All and (max-width: 320px) {
 
         html {
-            overflow-x: hidden; /* Hide horizontal overflow */
+            overflow-x: hidden;
         }
           
           body {
-            overflow-y: auto; /* Enable vertical scrolling */
+            overflow-y: auto; 
             overflow-x:hidden ;
           }
-          
+
         header {
 
             gap: 54vw;
@@ -1479,7 +1477,7 @@ nav a {
             justify-content: space-between;
             align-items: center;
             flex-direction: column;
-            margin-bottom: 100px;
+            margin-bottom: 60px;
             margin-top: 45px;
         }
 
