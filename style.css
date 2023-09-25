@@ -554,7 +554,7 @@ nav a {
 
     }
 
-
+}
 
 
     @media (max-width: 768px) {
@@ -785,7 +785,7 @@ nav a {
 
     @media All and (max-width: 425px) {
 
-        html{
+        html,body {
             overflow: hidden;
         }
         header {
@@ -1185,7 +1185,7 @@ nav a {
 
     @media All and (max-width: 320px) {
 
-        html{
+        html,body{
             overflow: hidden;
         }
         header {
@@ -1582,4 +1582,3 @@ nav a {
             margin: 10px 0;
         }
     }
-}
