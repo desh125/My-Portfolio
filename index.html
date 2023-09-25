@@ -43,15 +43,15 @@
     }
 
     header {
+
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 30px;
       margin-bottom: 80px;
-      margin-top: 30px;
-      margin-right: 10vw;
-      margin-left: 10vw;
-      background-color: #ffffff;
+padding-left: 12vw;
+padding-right: 12vw;
+      background-color: #E7F0ED;
     }
 
     .logo img {
@@ -69,6 +69,35 @@
       color: #333;
     }
 
+    @keyframes wave {
+      0% {
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(15deg);
+      }
+      50% {
+        transform: rotate(0deg);
+      }
+      75% {
+        transform: rotate(-15deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+    
+    .wave-hand {
+      display: inline-block;
+      font-size: 36px; 
+      animation: wave 2s infinite; 
+    }
+    
+
+nav a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
     .social-icons {
       display: flex;
       gap: 10px;
@@ -201,7 +230,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 100px;
+      margin-bottom: 13vw;
     }
 
     #home p {
@@ -453,7 +482,7 @@ gap: 49vw;
         justify-content: space-between;
         align-items: center;
         margin-right: 0;
-        margin-left: 4vw;
+        margin-left: 0vw;
       }
 
       .nav {
@@ -473,7 +502,7 @@ gap: 49vw;
       }
 
       header {
-        padding: 2px;
+        padding: 20px;
       }
       #my-tech-stack h1 {
         font-size: 24px;
@@ -494,8 +523,30 @@ gap: 49vw;
       }
 
 
-
-
+      .project-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0 -10px;
+  
+  
+        .project {
+          flex-basis: calc(22% - 20px);
+          margin: 10px;
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+          border: 1px solid #ccc;
+          border-radius: 10px;
+          box-sizing: border-box;
+          background-color: #fff;
+          text-align: center;
+        }
+  
+  
+        .box {
+          text-align: center;
+          width: 100%;
+        }
+      }  
       #projects h1 {
         font-size: 24px;
         margin-bottom: 10px;
@@ -783,7 +834,7 @@ display: none;
     <section id="home">
       <section>
         <p>
-Hi 👋,<br>My name is<br><span class="special-text">Deshan Tharaka</span><br>I build things for web
+Hi <span class="wave-hand">👋</span>,<br>My name is<br><span class="special-text">Deshan Tharaka</span><br>I build things for web
         </p>
       </section>
       <aside>
@@ -962,6 +1013,6 @@ Hi 👋,<br>My name is<br><span class="special-text">Deshan Tharaka</span><br>I 
     </section>
   </footer>
 
-</body>
+ </body>
 
 </html>
