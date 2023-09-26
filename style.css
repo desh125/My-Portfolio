@@ -48,7 +48,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Add to your CSS */
 button:hover {
     background-color: #3498db;
     color: #fff;
@@ -1006,6 +1005,7 @@ nav a {
 
         .button1{
             font-size: 10px;
+            margin-bottom: 14px;
         }
 
         #about {
@@ -1412,6 +1412,7 @@ nav a {
 
         .button1{
             font-size: 10px;
+            margin-bottom: 14px;
         }
 
         #about {
