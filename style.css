@@ -48,6 +48,15 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Add to your CSS */
+button:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
 
 
 body {
