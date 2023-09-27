@@ -1,17 +1,15 @@
-/* Import and apply Roboto font with a slight italic style */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:ital,wght@0,400;0,700;1,400&display=swap');
 
-/* Apply Roboto Slab font to the entire website */
+
 body {
     font-family: 'Roboto Slab', serif;
 }
 
-/* You can also specify the font for specific elements if needed */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto Slab', serif;
 }
 
-/* Add more specific font styles for other elements as needed */
 p {
     font-family: 'Roboto Slab', serif;
 }
