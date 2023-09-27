@@ -48,6 +48,12 @@ html {
     scroll-behavior: smooth;
 }
 
+.tcm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        }
+
 button:hover {
     background-color: #3498db;
     color: #fff;
@@ -64,6 +70,91 @@ body {
     animation: gradientAnimation 10s ease infinite;
 }
 
+#assignments {
+    height: 28vw;
+    align-items: center;
+    position: relative;
+    color: white;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 80%;
+position: absolute;
+top: 50%;
+bottom: 0;
+left: 50%;
+right: 0;
+align-items: center;
+    transform: translate(-50%,-50%);
+}
+
+.container h2{
+    text-align: center;
+    font-size: 34px;
+    color: #42446E;
+    margin-bottom: 4vw;
+
+}
+
+.container .services{
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.container .services .card{
+    width: 19vw;
+    text-align: center;
+    background: #222;
+    padding: 20px 15px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.container .services .card:hover{
+    background: chocolate;
+}
+
+.container .services .card .content{
+    transition: 0.3s;
+}
+
+.container .services .card:hover .content{
+    transform: scale(1.07);
+}
+
+.container .services .card .content .icon{
+    padding: 5px 0;
+    color: white;
+}
+
+.container .services .card .content .icon i{
+    font-size: 40px;
+}
+
+.container .services .card:hover .content .title{
+    color: white;
+}
+
+.container .services .card .content .title{
+    padding: 5px 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: chocolate;
+    transition: 0.3s;
+}
+
+.container .services .card .content .pnt{
+    padding: 5px 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+}
 @keyframes gradientAnimation {
     0% {
         background-position: 0% 50%;
@@ -570,6 +661,38 @@ nav a {
 
 @media (max-width : 1024px) {
 
+    #my-tech-stack img {
+        width: 80px;
+        margin: 30px;
+    
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    .tcm {
+display: flex;
+align-items: center;
+justify-content: center;
+    }
+
+.container h2{
+    font-size: 30px;
+}
+.container .services .card .content .title{
+    padding: 5px 0;
+    font-size: 17px;
+    font-weight: 500;
+    color: chocolate;
+    transition: 0.3s;
+}
+
+.container .services .card .content .pnt{
+    padding: 5px 0;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+}
     #home p {
         font-size: 30px;
     }
@@ -595,6 +718,8 @@ nav a {
     #about h1 {
         font-size: 30px;
     }
+
+
 
     .nav {
         flex-grow: 1;
@@ -638,6 +763,25 @@ nav a {
         padding-left: 7vw;
         padding-right: 7vw;
         align-items: center;
+    }
+
+    .container h2{
+        font-size: 24px;
+    }
+    .container .services .card .content .title{
+        padding: 5px 0;
+        font-size: 17px;
+        font-weight: 500;
+        color: chocolate;
+        transition: 0.3s;
+    }
+    
+    .container .services .card .content .pnt{
+        padding: 5px 0;
+        font-size: 12px;
+        font-weight: 500;
+        color: rgb(255, 255, 255);
+        transition: 0.3s;
     }
 
     .logo img {
@@ -863,6 +1007,55 @@ nav a {
     body {
         overflow-y: auto;
         overflow-x: hidden;
+    }
+
+    #assignments {
+        height: 180vw;
+        align-items: center;
+        position: relative;
+        color: white;
+        box-sizing: border-box;
+    }
+    
+    .container{
+    width: 60%;
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    right: 0;
+    align-items: center;
+        transform: translate(-50%,-50%);
+    }
+    
+
+    .container h2{
+        font-size: 24px;
+        margin-bottom: 35px;
+    }
+
+    .container .services {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container .services .card {
+
+        width: 70%;
+    }
+    .container .services .card .content .title{
+        padding: 5px 0;
+        font-size: 17px;
+        font-weight: 500;
+        color: chocolate;
+        transition: 0.3s;
+    }
+    
+    .container .services .card .content .pnt{
+        padding: 5px 0;
+        font-size: 12px;
+        font-weight: 500;
+        color: rgb(255, 255, 255);
+        transition: 0.3s;
     }
 
     header {
@@ -1282,6 +1475,25 @@ nav a {
         margin-left: 0vw;
     }
 
+
+    #assignments {
+        height: 230vw;
+        align-items: center;
+        position: relative;
+        color: white;
+        box-sizing: border-box;
+    }
+    
+    .container{
+    width: 78%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    right: 0;
+    align-items: center;
+        transform: translate(-50%,-50%);
+    }
+    
     .nav {
         display: none;
     }
