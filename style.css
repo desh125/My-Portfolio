@@ -44,19 +44,16 @@ a {
     width: 8px;
   }
   
-  /* Track */
   ::-webkit-scrollbar-track {
     background: #ffffff; 
   }
    
-  /* Handle */
   ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     height: 50px;
     background: linear-gradient(to right, #13B0F5, #E70FAA);
   }
   
-  /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
@@ -110,6 +107,127 @@ body {
 }
 
 
+.buttons {
+    margin: 0;
+    text-align: center;
+}
+
+.btn-hover {
+    width: 180px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 25px;
+    color: #fff;
+    cursor: pointer;
+    height: 40px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+.btn-hover.color-1 {
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+#assignments1 {
+    height: 35vw;
+    align-items: center;
+    position: relative;
+    color: white;
+    box-sizing: border-box;
+}
+
+.container1{
+    width: 80%;
+position: absolute;
+top: 50%;
+bottom: 0;
+left: 50%;
+right: 0;
+align-items: center;
+    transform: translate(-50%,-50%);
+}
+
+.container1 h2{
+    text-align: center;
+    font-size: 34px;
+    color: #42446E;
+    margin-bottom: 4vw;
+
+}
+
+.container1 .services1{
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+
+.container1 .services1 .card1 {
+    width: 19vw;
+    text-align: center;
+    background: whitesmoke;
+    padding: 40px 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 12px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.container1 .services1 .card1:hover {
+    background: linear-gradient(to right, #667eea, #764ba2); /* Linear gradient transition */
+}
+
+
+.container1 .services1 .card1 .content1{
+    transition: 0.3s;
+}
+
+.container1 .services1 .card1:hover .content1{
+    transform: scale(1.07);
+}
+
+
+.container1 .services1 .card1:hover .content1 .title1{
+    color: white;
+}
+
+.container1 .services1 .card1 .content1 .title1{
+    padding: 5px 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: chocolate;
+    transition: 0.3s;
+}
+
+.container1 .services1 .card1 .content1 .pnt1{
+    padding: 5px 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    transition: 0.3s;
+}
 
 #assignments {
     height: 30vw;
@@ -636,6 +754,7 @@ footer {
 
 #contact_form input,
 #contact_form textarea {
+    resize: none;
     width: 96%;
     padding: 10px;
     margin-bottom: 15px;
@@ -714,6 +833,49 @@ nav a {
 display: flex;
 align-items: center;
 justify-content: center;
+    }
+
+    .buttons {
+        margin: 0;
+        text-align: center;
+    }
+    
+    .btn-hover {
+        width: 150px;
+        font-size: 12px;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+        margin-top: 20px;
+        height: 35px;
+        text-align:center;
+        border: none;
+        background-size: 300% 100%;
+    
+        border-radius: 50px;
+        moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+    }
+    
+
+    .container1 h2{
+        font-size: 30px;
+        margin-top: 30px;
+    }
+    .container1 .services1 .card1 .content1 .title1{
+        padding: 5px 0;
+        font-size: 17px;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+    
+    .container1 .services1 .card1 .content1 .pnt1{
+        padding: 5px 0;
+        font-size: 12px;
+        font-weight: 500;
+        transition: 0.3s;
     }
 
 .container h2{
@@ -807,6 +969,48 @@ margin-bottom: 45px;
         align-items: center;
     }
 
+    .btn-hover {
+        width: 140px;
+        font-size: 11px;
+        font-weight: 600;
+        margin-top: 25px;
+        color: #fff;
+        cursor: pointer;
+        height: 30px;
+        text-align:center;
+        border: none;
+        background-size: 300% 100%;
+    
+        border-radius: 50px;
+        moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+    }
+
+    #assignments1 {
+        height: 44vw;
+        align-items: center;
+        position: relative;
+        color: white;
+        box-sizing: border-box;
+    }
+    .container1 h2{
+        font-size: 24px;
+    }
+    .container1 .services1 .card1 .content1 .title1{
+        padding: 5px 0;
+        font-size: 17px;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+    
+    .container1 .services1 .card1 .content1 .pnt1{
+        padding: 5px 0;
+        font-size: 12px;
+        font-weight: 500;
+        transition: 0.3s;
+    }
 
     #assignments {
         height: 44vw;
@@ -1057,6 +1261,78 @@ margin-bottom: 45px;
     body {
         overflow-y: auto;
         overflow-x: hidden;
+    }
+
+    #assignments1 {
+        height: 90vw;
+        align-items: center;
+        position: relative;
+        color: white;
+        box-sizing: border-box;
+    }
+    
+    .container1{
+    width: 60%;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    right: 0;
+    align-items: center;
+        transform: translate(-50%,-50%);
+    }
+
+
+    .buttons {
+     margin-top: 20px;
+     margin: 0;
+    text-align: center;
+    }
+
+    .btn-hover {
+    width: 140px;
+    font-size: 11px;
+    margin-top: 20px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    height: 32px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    }
+
+    .container1 h2{
+        font-size: 24px;
+        margin-bottom: 35px;
+    }
+
+    .container1 .services1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container1 .services1 .card1 {
+
+        width: 70%;
+    }
+    .container1 .services1 .card1 .content1 .title1{
+        padding: 5px 0;
+        font-size: 17px;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+    
+    .container1 .services1 .card1 .content1 .pnt1{
+        padding: 5px 0;
+        font-size: 12px;
+        font-weight: 500;
+        transition: 0.3s;
     }
 
     #assignments {
@@ -1539,6 +1815,24 @@ margin-bottom: 45px;
     width: 78%;
     position: absolute;
     top: 40%;
+    left: 50%;
+    right: 0;
+    align-items: center;
+        transform: translate(-50%,-50%);
+    }
+
+    #assignments1 {
+        height: 100vw;
+        align-items: center;
+        position: relative;
+        color: white;
+        box-sizing: border-box;
+    }
+    
+    .container1{
+    width: 78%;
+    position: absolute;
+    top: 53%;
     left: 50%;
     right: 0;
     align-items: center;
