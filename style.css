@@ -65,8 +65,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px;
-    margin-bottom: 80px;
+    padding: 1.875rem;
+    margin-bottom: 5rem;
     padding-left: 12vw;
     padding-right: 12vw;
     background-color: #E7F0ED;
@@ -331,14 +331,17 @@ align-items: center;
 
 
 .logo img {
-    max-width: 100px;
+    max-width: 6.25rem;
 }
 
 .nav {
+    display: flex;
     position: relative;
     flex-grow: 1;
     align-items: center;
-    margin-left: 19vw;
+    justify-content: end;
+    margin-right: 2.3rem;
+    
 }
 
 nav a {
@@ -822,7 +825,7 @@ nav a {
 }
 
 
-@media (max-width : 1024px) {
+@media (max-width: 1024px){
 
     #my-tech-stack img {
         width: 80px;
@@ -930,10 +933,12 @@ margin-bottom: 45px;
 
     .nav {
         display: flex;
+        position: relative;
         flex-grow: 1;
-        margin-left: 8vw;
         align-items: center;
-
+        justify-content: end;
+        margin-right: 2.3rem;
+        
     }
     nav a {
         text-decoration: none;
@@ -971,7 +976,7 @@ color: #42446E;
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 768px){
     header {
         padding: 28px;
         padding-left: 7vw;
@@ -1058,11 +1063,17 @@ color: #42446E;
         align-items: center;
     }
 
+
     .nav {
-        display: flex;
-        margin-left: 6vw;
-        align-items: center;
+            display: flex;
+            position: relative;
+            flex-grow: 1;
+            align-items: center;
+            justify-content: end;
+            margin-right: 1rem;
+            
     }
+    
 
     .nav a {
         align-self: center;
@@ -1273,7 +1284,7 @@ color: #42446E;
 }
 
 
-@media All and (max-width: 426px) {
+@media All and (max-width: 426px){
 
     html {
         overflow-x: hidden;
