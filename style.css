@@ -337,13 +337,14 @@ align-items: center;
 .nav {
     position: relative;
     flex-grow: 1;
+    align-items: center;
     margin-left: 19vw;
 }
 
 nav a {
     text-decoration: none;
     margin-right: 2.42vw;
-    color: #333;
+    color: #42446E;
 }
 
 @keyframes wave {
@@ -382,10 +383,12 @@ nav a:hover {
 
 .social-icons {
     display: flex;
-    gap: 10px;
+    align-items: center;
 }
 
 .social-icons img {
+    display: flex;
+    align-items: center;
     width: 20px;
     height: 20px;
     object-fit: cover;
@@ -926,11 +929,18 @@ margin-bottom: 45px;
 
 
     .nav {
+        display: flex;
         flex-grow: 1;
         margin-left: 8vw;
         align-items: center;
 
     }
+    nav a {
+        text-decoration: none;
+font-size: 14px;
+color: #42446E;
+    }
+
 
     .project-row {
         display: flex;
@@ -1040,22 +1050,33 @@ margin-bottom: 45px;
 
     .logo img {
         max-width: 75px;
+        align-items: center;
+    }
+
+    .logo{
+        display: flex;
+        align-items: center;
     }
 
     .nav {
+        display: flex;
         margin-left: 6vw;
+        align-items: center;
     }
 
     .nav a {
+        align-self: center;
         font-size: 13px;
     }
 
     .social-icons {
         display: flex;
+        align-items: center;
         gap: 8px;
     }
 
     .social-icons img {
+        align-self: center;
         width: 15px;
         height: 15px;
         object-fit: cover;
