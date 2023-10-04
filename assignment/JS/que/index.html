@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        section {
+            width: 95vw;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        section > div {
+            flex-grow: 1;
+            height: 33%;
+            border: 1px solid rgb(255, 255, 255);
+        }
+
+        section > div:first-child {
+            align-self: start;
+        }
+
+        section > div:last-child {
+            align-self: end;
+        }
+    </style>
+</head>
+<body>
+
+<section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</section>
+
+<script>
+    let colors = ["red", "black", "purple", "blue", "yellow", "green"];
+    var divs = document.querySelectorAll("section > div");
+
+
+    setInterval(doit,500)
+    function doit(){
+        var last=colors.pop();
+        colors.unshift(last);
+
+        for (let i in colors) {
+
+            divs[i].style.background=colors[i];
+
+        }
+    }
+
+</script>
+
+</body>
+</html>
+

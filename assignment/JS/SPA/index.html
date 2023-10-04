@@ -67,7 +67,7 @@
         <div class="section" id="home">
             <h1 style="text-align: center;">Dashboard</h1>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-sm-12 col-md-4">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Orders</h5>
@@ -78,7 +78,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-sm-12 col-md-4">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Items</h5>
@@ -89,7 +89,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-sm-12 col-md-4">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Invoice</h5>
@@ -234,7 +234,8 @@
                                     <th scope="col">Salary</th>
                                 </tr>
                             </thead>
-                            <tbody>
+
+                            <tbody id="tb">
 
                                 <tr>
                                     <th scope="row">1</th>
@@ -267,21 +268,21 @@
                             <form>
                                 <div class="mb-3">
                                     <label for="customerName" class="form-label">Customer Name</label>
-                                    <input type="text" class="form-control" id="customerName">
+                                    <input type="text" class="form-control" id="cName">
                                 </div>
                                 <div class="mb-3">
                                     <label for="customerTP" class="form-label">TP</label>
-                                    <input type="text" class="form-control" id="customerTP">
+                                    <input type="text" class="form-control" id="cTP">
                                 </div>
                                 <div class="mb-3">
                                     <label for="customerAge" class="form-label">Age</label>
-                                    <input type="text" class="form-control" id="customerAge">
+                                    <input type="text" class="form-control" id="cAge">
                                 </div>
                                 <div class="mb-3">
                                     <label for="customerSalary" class="form-label">Salary</label>
-                                    <input type="text" class="form-control" id="customerSalary">
+                                    <input type="text" class="form-control" id="cSalary">
                                 </div>
-                                <button type="button" class="btn btn-success">Add Customer</button>
+                                <button type="button" class="btn btn-success" id="saveButton">Add Customer</button>
                                 <button type="button" class="btn btn-warning">Update</button>
                                 <button type="button" class="btn btn-danger">Delete</button>
                             </form>
@@ -419,6 +420,8 @@
         </div>
     </section>
     <script>
+
+
         document.addEventListener("DOMContentLoaded", function () {
             function hideAllSections() {
                 const sections = document.querySelectorAll(".section");
@@ -452,10 +455,37 @@
             navLinks.forEach((navLink) => {
                 navLink.addEventListener("click", function (event) {
                     event.preventDefault();
-                    const sectionId = this.getAttribute("data-section");
+                    const sectionId = navLink.getAttribute("data-section");
                     loadContent(sectionId);
                 });
             });
+            let sButton = document.getElementById("saveButton");
+
+            sButton.addEventListener("click", function (event) {
+
+                let name = document.getElementById("cName").value;
+                let tp = document.getElementById("cTP").value;
+                let age = document.getElementById("cAge").value;
+                let salary = document.getElementById("cSalary").value;
+                console.log(tp);
+                let tb1 = document.getElementById("tb")
+                let th1 = document.createElement("td")
+                let tr = document.createElement("tr");
+                let td1 = document.createElement("td");
+                let td2 = document.createElement("td")
+                let td3 = document.createElement("td")
+                let td4 = document.createElement("td")
+               tb1.appendChild(tr)
+               tr.appendChild(th1,td1,td2,td3,td4)
+                th1.textContent = 2;
+                td1.textContent = name;
+                td2.textContent = tp;
+                td3.textContent = age;
+                td4.textContent = salary
+
+            });
+
+
         });
     </script>
 </body>
