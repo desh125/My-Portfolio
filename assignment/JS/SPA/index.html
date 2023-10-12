@@ -154,22 +154,14 @@
                         <table class="table table-bordered">
                             <thead class="table-primary">
                                 <tr>
-                                    <th scope="col">#</th>
+                                    
                                     <th scope="col">Item Code</th>
                                     <th scope="col">Item Name</th>
                                     <th scope="col">Price</th>
                                     <th scope="col">Quantity</th>
                                 </tr>
                             </thead>
-                            <tbody>
-
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>John Doe</td>
-                                    <td>123-456-7890</td>
-                                    <td>35</td>
-                                    <td>$50,000</td>
-                                </tr>
+                            <tbody id="tb2">
 
                             </tbody>
                         </table>
@@ -187,30 +179,31 @@
 
                     <div class="card card-reduced-height">
                         <div class="card-header bg-primary text-white">
-                            Add a Customer
+                            Add a Item
                         </div>
                         <div class="card-body">
 
                             <form>
                                 <div class="mb-3">
                                     <label for="customerName" class="form-label">Item Code</label>
-                                    <input type="text" class="form-control" id="customerName">
+                                    <input type="text" class="form-control" id="itemCode">
                                 </div>
                                 <div class="mb-3">
                                     <label for="customerTP" class="form-label">Item Name</label>
-                                    <input type="text" class="form-control" id="customerTP">
+                                    <input type="text" class="form-control" id="itemName">
                                 </div>
                                 <div class="mb-3">
                                     <label for="customerAge" class="form-label">Price</label>
-                                    <input type="text" class="form-control" id="customerAge">
+                                    <input type="text" class="form-control" id="price">
                                 </div>
                                 <div class="mb-3">
                                     <label for="customerSalary" class="form-label">Quantity</label>
-                                    <input type="text" class="form-control" id="customerSalary">
+                                    <input type="text" class="form-control" id="quantity">
                                 </div>
-                                <button type="button" class="btn btn-success">Add Item</button>
-                                <button type="button" class="btn btn-warning">Update</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
+                                <button type="button" class="btn btn-success" id="addButtonItem">Add Item</button>
+                                <button type="button" class="btn btn-warning" id="updateButtonItem">Update</button>
+                                <button type="button" class="btn btn-danger" id="deleteButtonItem">Delete</button>
+                                <button type="button" class="btn btn-danger" id="clearButtonItem">Clear Fields</button>
                             </form>
                         </div>
                     </div>
@@ -224,26 +217,17 @@
 
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <div class="table-responsive">
-                        <table class="table table-bordered">
+                        <table class="table table-bordered" id="cusTable">
                             <thead class="table-primary">
                                 <tr>
-                                    <th scope="col">#</th>
+                                    <th scope="col">Customer Id</th>
                                     <th scope="col">Customer Name</th>
                                     <th scope="col">TP</th>
                                     <th scope="col">Age</th>
                                     <th scope="col">Salary</th>
                                 </tr>
                             </thead>
-
                             <tbody id="tb">
-
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>John Doe</td>
-                                    <td>123-456-7890</td>
-                                    <td>35</td>
-                                    <td>$50,000</td>
-                                </tr>
 
                             </tbody>
                         </table>
@@ -266,6 +250,10 @@
                         <div class="card-body">
 
                             <form>
+                                <div class="mb-3">
+                                    <label for="customerId" class="form-label">Customer Id</label>
+                                    <input type="text" class="form-control" id="cId">
+                                </div>
                                 <div class="mb-3">
                                     <label for="customerName" class="form-label">Customer Name</label>
                                     <input type="text" class="form-control" id="cName">
@@ -282,9 +270,10 @@
                                     <label for="customerSalary" class="form-label">Salary</label>
                                     <input type="text" class="form-control" id="cSalary">
                                 </div>
-                                <button type="button" class="btn btn-success" id="saveButton">Add Customer</button>
-                                <button type="button" class="btn btn-warning">Update</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
+                                <button type="button" class="btn btn-success" id="saveButtonCustomer" >Add Customer</button>
+                                <button type="button" class="btn btn-warning" id="updateButtonCustomer">Update</button>
+                                <button type="button" class="btn btn-danger" id="deleteButtonCustomer">Delete</button>
+                                <button type="button" class="btn btn-danger" id="clearButtonCustomer">Clear All</button>
                             </form>
                         </div>
                     </div>
@@ -308,11 +297,14 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="orderDate" class="form-label">Date</label>
-                                    <input type="text" class="form-control" id="orderDate">
+                                    <input type="date" class="form-control" id="orderDate">
                                 </div>
                                 <div class="mb-3">
                                     <label for="customerId" class="form-label">Customer ID</label>
-                                    <input type="text" class="form-control" id="customerId">
+                                    <select class="form-control" id="selectCusID">
+                                        <option value="1">A</option>
+                                        <option value="2">B</option>
+                                    </select>                                
                                 </div>
                                 <div class="mb-3">
                                     <label for="customerName" class="form-label">Customer Name</label>
@@ -340,15 +332,18 @@
                             <form>
                                 <div class="mb-3">
                                     <label for="itemCode" class="form-label">Item Code</label>
-                                    <input type="text" class="form-control" id="itemCode">
+                                    <select class="form-control" id="selectItemCode">
+                                        <option value="1">A</option>
+                                        <option value="2">B</option>
+                                    </select> 
                                 </div>
                                 <div class="mb-3">
                                     <label for="itemName" class="form-label">Item Name</label>
-                                    <input type="text" class="form-control" id="itemName">
+                                    <input type="text" class="form-control" id="itemName2">
                                 </div>
                                 <div class="mb-3">
                                     <label for="itemPrice" class="form-label">Price</label>
-                                    <input type="text" class="form-control" id="itemPrice">
+                                    <input type="text" class="form-control" id="itemPrice2">
                                 </div>
                                 <div class="mb-3">
                                     <label for="qtyOnHand" class="form-label">Qty On Hand</label>
@@ -362,7 +357,7 @@
                                     <label for="qtyAfter" class="form-label">Qty After</label>
                                     <input type="text" class="form-control" id="qtyAfter">
                                 </div>
-                                <button type="button" class="btn btn-success">Add Item</button>
+                                <button type="button" class="btn btn-success" id="addItemButton2">Add Item</button>
                             </form>
                         </div>
                     </div>
@@ -391,7 +386,7 @@
                                     <label for="totalPrice" class="form-label">Total Price</label>
                                     <input type="text" class="form-control" id="totalPrice" disabled>
                                 </div>
-                                <button type="button" class="btn btn-primary">Purchase</button>
+                                <button type="button" class="btn btn-primary" id="purchaseButton">Purchase</button>
                             </form>
                         </div>
                     </div>
@@ -411,7 +406,7 @@
                                     <th scope="col">Total</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="tb3">
                             </tbody>
                         </table>
                     </div>
@@ -459,35 +454,20 @@
                     loadContent(sectionId);
                 });
             });
-            let sButton = document.getElementById("saveButton");
-
-            sButton.addEventListener("click", function (event) {
-
-                let name = document.getElementById("cName").value;
-                let tp = document.getElementById("cTP").value;
-                let age = document.getElementById("cAge").value;
-                let salary = document.getElementById("cSalary").value;
-                console.log(tp);
-                let tb1 = document.getElementById("tb")
-                let th1 = document.createElement("td")
-                let tr = document.createElement("tr");
-                let td1 = document.createElement("td");
-                let td2 = document.createElement("td")
-                let td3 = document.createElement("td")
-                let td4 = document.createElement("td")
-               tb1.appendChild(tr)
-               tr.appendChild(th1,td1,td2,td3,td4)
-                th1.textContent = 2;
-                td1.textContent = name;
-                td2.textContent = tp;
-                td3.textContent = age;
-                td4.textContent = salary
-
-            });
 
 
         });
     </script>
+    <script src="../SPA/assets/JS/js/jquery-3.6.1.min.js"></script>
+    <script src="../SPA/assets/JS/js/bootstrap.min.js"></script>
+    <script src="../SPA/db/db.js"></script>
+    <script src="../SPA/model/Customer.js"></script>
+    <script src="../SPA/controller/CustomerController.js"></script>
+    <script src="../SPA/controller/invoiceController.js"></script>
+    <script src="../SPA/model/Item.js"></script>
+    <script src="../SPA/controller/ItemController.js"></script>
+    <script src="../SPA/validations/CustomerValidations.js"></script>
+    
 </body>
 
 </html>
