@@ -110,3 +110,19 @@
             $('#totalPrice').val(updatedTotalPrice);
         });
     });
+
+    function calculateBalanceAndDiscount() {
+        var cash = parseFloat($('#cash').val()) || 0;
+        var totalPrice = parseFloat($('#totalPrice').val()) || 0;
+
+        var balance = cash - totalPrice;
+
+        var discountPercentage = parseFloat($('#discount').val()) || 0;
+        var discountAmount = (totalPrice * discountPercentage) / 100;
+
+        $('#balance').val(balance);
+        $('#totalPrice').val(totalPrice - discountAmount);
+    }
+
+    $('#cash').on('input', calculateBalanceAndDiscount);
+    $('#discount').on('input', calculateBalanceAndDiscount);

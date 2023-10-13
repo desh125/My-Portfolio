@@ -59,30 +59,32 @@ $("#clearButtonCustomer").click(function () {
 
 // CRUD operation Functions
 function saveCustomer() {
-    let customerID = $("#cId").val();
-    if (searchCustomer(customerID.trim()) == undefined) {
+    if (checkAllValidations()) {
+        let customerID = $("#cId").val();
+        if (searchCustomer(customerID.trim()) == undefined) {
+            let customerName = $("#cName").val();
+            let customerTP = $("#cTP").val();
+            let customerAge = $("#cAge").val();
+            let customerSalary = $("#cSalary").val();
 
-        let customerName = $("#cName").val();
-        let customerTP = $("#cTP").val();
-        let customerAge = $("#cAge").val();
-        let customerSalary = $("#cSalary").val();
+            let newCustomer = Object.assign({}, customer);
 
+            newCustomer.id = customerID;
+            newCustomer.name = customerName;
+            newCustomer.tp = customerTP;
+            newCustomer.age = customerAge;
+            newCustomer.salary = customerSalary;
 
-        let newCustomer = Object.assign({}, customer);
-
-        newCustomer.id = customerID;
-        newCustomer.name = customerName;
-        newCustomer.tp = customerTP;
-        newCustomer.age = customerAge;
-        newCustomer.salary = customerSalary;
-
-        customerDB.push(newCustomer);
-        clearCustomerInputFields();
-        getAllCustomers();
-        populateCustomerDropdown();
+            customerDB.push(newCustomer);
+            clearCustomerInputFields();
+            getAllCustomers();
+            populateCustomerDropdown();
+        } else {
+            alert("Customer already exists!");
+            clearCustomerInputFields();
+        }
     } else {
-        alert("Customer already exits.!");
-       clearCustomerInputFields();
+        alert("Please fix validation errors before saving.");
     }
 }
 

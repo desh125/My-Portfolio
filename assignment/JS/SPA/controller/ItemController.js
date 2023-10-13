@@ -56,28 +56,33 @@ $("#clearButtonItem").click(function () {
 
 
 function saveItem() {
-    let itemCode = $("#itemCode").val();
-    if (searchCustomer(itemCode.trim()) == undefined) {
-
-        let itemName = $("#itemName").val();
-        let price = $("#price").val();
-        let quantity = $("#quantity").val();
-
-        let newItem = Object.assign({}, item);
-
-        newItem.code = itemCode;
-        newItem.name = itemName;
-        newItem.price = price;
-        newItem.quantity = quantity;
-
-        itemDB.push(newItem);
-        clearItemInputFields();
-        getAllItems();
-        populateItemCodeDropdown();
-    } else {
-        alert("Item already exits.!");
-        clearItemInputFields();
+    if(checkAllItemValidations()){
+        let itemCode = $("#itemCode").val();
+        if (searchCustomer(itemCode.trim()) == undefined) {
+    
+            let itemName = $("#itemName").val();
+            let price = $("#price").val();
+            let quantity = $("#quantity").val();
+    
+            let newItem = Object.assign({}, item);
+    
+            newItem.code = itemCode;
+            newItem.name = itemName;
+            newItem.price = price;
+            newItem.quantity = quantity;
+    
+            itemDB.push(newItem);
+            clearItemInputFields();
+            getAllItems();
+            populateItemCodeDropdown();
+        } else {
+            alert("Item already exits.!");
+            clearItemInputFields();
+        }
+    }else{
+        alert("Please fix validation errors before saving.");
     }
+   
 }
 
 
