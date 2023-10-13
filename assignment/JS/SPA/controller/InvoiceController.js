@@ -1,4 +1,7 @@
-    function populateCustomerDropdown() {
+$('#orderId, #customerName, #customerTP, #customerSalary').prop('disabled', true);
+$('#itemName2, #itemPrice2, #qtyOnHand, #qtyAfter').prop('disabled', true);
+
+   function populateCustomerDropdown() {
         var selectCusID = $('#selectCusID');
 
         selectCusID.empty();
@@ -39,6 +42,7 @@
         var selectedCustomerId = $(this).val();
         var selectedCustomer = customerDB.find(function (customer) {
             return customer.id == selectedCustomerId;
+            
         });
 
   
@@ -47,6 +51,9 @@
         $('#customerTP').val(selectedCustomer.tp);
         $('#customerSalary').val(selectedCustomer.salary);
         $('#customerAddress').val('');
+
+      
+
     });
 
     $('#selectItemCode').change(function () {
@@ -60,6 +67,8 @@
         $('#qtyOnHand').val(selectedItem.quantity);
         let qtyAfter = $('#qty').val();
         $('#qtyAfter').val(selectedItem.quantity-qtyAfter);
+
+        
     });
 
     $('#qty, #itemPrice2').on('input', function () {
@@ -112,17 +121,20 @@
     });
 
     function calculateBalanceAndDiscount() {
+        var updatedQty = parseInt($('#qty').val()) || 0;
+        var updatedPrice = parseFloat($('#itemPrice2').val()) || 0;
+        var updatedTotalPrice = updatedQty * updatedPrice;
         var cash = parseFloat($('#cash').val()) || 0;
-        var totalPrice = parseFloat($('#totalPrice').val()) || 0;
-
-        var balance = cash - totalPrice;
-
         var discountPercentage = parseFloat($('#discount').val()) || 0;
-        var discountAmount = (totalPrice * discountPercentage) / 100;
-
+        var discountAmount = (updatedTotalPrice * discountPercentage) / 100;
+    
+        var discountedTotal = updatedTotalPrice - discountAmount; 
+        $('#totalPrice').val(discountedTotal);
+    
+        var balance = cash - discountedTotal; 
         $('#balance').val(balance);
-        $('#totalPrice').val(totalPrice - discountAmount);
     }
-
+    
     $('#cash').on('input', calculateBalanceAndDiscount);
     $('#discount').on('input', calculateBalanceAndDiscount);
+    
