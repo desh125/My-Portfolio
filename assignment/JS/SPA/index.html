@@ -127,17 +127,8 @@
                                     <th scope="col">Actions</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>12345</td>
-                                    <td>123 Main St</td>
-                                    <td>2023-09-30</td>
-                                    <td>
-                                        <button class="btn btn-warning">Update</button>
-                                        <button class="btn btn-danger">Delete</button>
-                                    </td>
-                                </tr>
+                            <tbody id="tb5">
+  
                             </tbody>
                         </table>
                     </div>
@@ -302,8 +293,7 @@
                                 <div class="mb-3">
                                     <label for="customerId" class="form-label">Customer ID</label>
                                     <select class="form-control" id="selectCusID">
-                                        <option value="1">A</option>
-                                        <option value="2">B</option>
+
                                     </select>                                
                                 </div>
                                 <div class="mb-3">
@@ -333,8 +323,7 @@
                                 <div class="mb-3">
                                     <label for="itemCode" class="form-label">Item Code</label>
                                     <select class="form-control" id="selectItemCode">
-                                        <option value="1">A</option>
-                                        <option value="2">B</option>
+
                                     </select> 
                                 </div>
                                 <div class="mb-3">
@@ -466,6 +455,7 @@
     <script src="../SPA/controller/invoiceController.js"></script>
     <script src="../SPA/model/Item.js"></script>
     <script src="../SPA/controller/ItemController.js"></script>
+    <script src="../SPA/controller/OrderDetailsController.js"></script>
     <script src="../SPA/validations/CustomerValidations.js"></script>
     <script src="../SPA/validations/ItemValidations.js"></script>
     <script src="../SPA/validations/InvoiceValidations.js"></script>
