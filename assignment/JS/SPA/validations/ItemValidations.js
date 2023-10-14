@@ -21,9 +21,34 @@ function checkItemValidations(object) {
         return true;
     } else {
         setBorder(false, object);
+
+        // Provide a custom message based on the field
+        let fieldName = object.field.attr('id');
+
+        let errorMessage;
+        switch (fieldName) {
+            case 'itemCode':
+                errorMessage = 'Invalid Item Code. It should match the format IXXX.';
+                break;
+            case 'itemName':
+                errorMessage = 'Invalid Item Name. It should be at least 5 characters long and contain only letters, numbers, and spaces.';
+                break;
+            case 'price':
+                errorMessage = 'Invalid Price. Please enter a valid numeric value (optional 2 decimal places).';
+                break;
+            case 'quantity':
+                errorMessage = 'Invalid Quantity. Please enter a positive integer.';
+                break;
+            default:
+                errorMessage = 'Invalid Input';
+        }
+
+        alert(errorMessage);
+
         return false;
     }
 }
+
 
 function checkAllItemValidations() {
     let isValid = true;

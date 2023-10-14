@@ -24,6 +24,33 @@ function checkValidations(object) {
         return true;
     } else {
         setBorder(false, object);
+
+        // Provide a custom message based on the field
+        let fieldName = object.field.attr('id');
+
+        let errorMessage;
+        switch (fieldName) {
+            case 'cId':
+                errorMessage = 'Invalid Customer ID. It should match the format C00-XXX';
+                break;
+            case 'cName':
+                errorMessage = 'Invalid Customer Name. It should be at least 5 characters long and contain only letters and spaces.';
+                break;
+            case 'cTP':
+                errorMessage = 'Invalid Phone Number. It should be a 10-digit number.';
+                break;
+            case 'cAddress':
+                errorMessage = 'Invalid Address. It should be at least 8 characters long and contain only letters, numbers, and spaces.';
+                break;
+            case 'cSalary':
+                errorMessage = 'Invalid Salary. It should be a numeric value with an optional 2 decimal places.';
+                break;
+            default:
+                errorMessage = 'Invalid Input';
+        }
+
+        alert(errorMessage);
+
         return false;
     }
 }
