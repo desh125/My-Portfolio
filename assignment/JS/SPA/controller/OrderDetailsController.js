@@ -25,6 +25,8 @@ $('#purchaseButton').click(function () {
     $('.deleteOrder').click(function () {
         $(this).closest('tr').remove();
     });
+    
 });
+
 
 
